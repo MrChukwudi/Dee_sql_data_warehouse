@@ -1,1 +1,18 @@
+-- bECAUSE WE HAVE TO LOAD THE CSVs FROM MY LOCAL MACHINE WITHOUT SERVER ACCESS, I went with the pgSQL/Terminal approach
+-- 1. CRM Customers
+\copy bronze.crm_cust_info FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_crm/cust_info.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
 
+-- 2. CRM Products
+\copy bronze.crm_prd_info FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_crm/prd_info.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+-- 3. CRM Sales Details
+\copy bronze.crm_sales_details FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_crm/sales_details.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+-- 4. ERP Customers (AZ12)
+\copy bronze.erp_cust_az12 FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_erp/CUST_AZ12.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+-- 5. ERP Locations (A101)
+\copy bronze.erp_loc_a101 FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_erp/LOC_A101.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+-- 6. ERP Product Categories (G1V2)
+\copy bronze.erp_px_cat_g1v2 FROM '/Users/admin/Downloads/Quant/My_Py/Data/sql-data-warehouse-project/datasets/source_erp/PX_CAT_G1V2.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
