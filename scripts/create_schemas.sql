@@ -1,4 +1,4 @@
--- This command is run inside the deeData WareHouse Query tool:
+-- This script is run inside the deeData WareHouse Query tool:
 
 CREATE SCHEMA bronze;
 CREATE SCHEMA silver;
